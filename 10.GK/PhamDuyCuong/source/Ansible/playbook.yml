@@ -9,14 +9,13 @@
   become: yes
   roles:
     # Set up network for containers in nodes
-    - set_up_network
     - db
     # Run containers and connect to the existing network
     - api
     - web
 
-  - name: Set up load balancer in host
-    hosts: host
-    become: yes
-    roles:
-      - lb
+- name: Set up load balancer in host
+  hosts: host
+  become: yes
+  roles:
+    - lb
