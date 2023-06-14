@@ -4,7 +4,7 @@ from pymongo import MongoClient
 
 
 def init_db(path_to_csv):
-    DB_HOSTNAME = "ec2-44-201-231-16.compute-1.amazonaws.com:27017/"
+    DB_HOSTNAME = "mongodb-server:27017/"
     DATABASE_NAME = "VDT2023"
     logger = logging.getLogger()
     try:
